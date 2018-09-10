@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Visualizer</title>
+
+	<script src="../libraries/p5.js"></script>
+	<script src="../libraries/p5.dom.js"></script>
+	<script src="../libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+
+	<style>
+		body {
+      margin:0;
+			margin-left:45px;
+			padding:0;
+			overflow: hidden;
+          font-family: Arial;
+          background-color: black;
+          color: white;
+          margin: 0;
+          padding: 0;
+      }
+      .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+		canvas {
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+		<button class="button" id="btn1" onclick="toggleSong()">Pause</button>
+		<br></br>
+</body>
+</html>
