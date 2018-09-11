@@ -3,24 +3,32 @@ var SongFFT;
 var spec;
 var amp;
 var amplitude;
-var button;
 var particles = [];
 
 function preload(){
   song = loadSound("Isolate.mp3");
 }
 function setup() {
-  var cnv = createCanvas(640, 640);
+  var cnv = createCanvas(windowWidth, windowHeight);
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
+  cnv.style('display', 'block');
+  cnv.id('canvas');
+  document.getElementById("canvas").style.zIndex = "-1";
+    
 
   background(0,0,0);
   song.play();
+
   SongFFT = new p5.FFT(0.9,32);
   amp = new p5.Amplitude();
   song.setVolume(1.0);
 
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function toggleSong(){
